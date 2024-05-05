@@ -51,7 +51,7 @@ code ~/.bashrc
 2. Add the following lines.
 ```shell
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH" ## recently added first command
 eval "$(pyenv init -)"
 ```
 
